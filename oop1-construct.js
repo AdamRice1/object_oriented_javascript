@@ -19,15 +19,22 @@ Create a class that can categorize at least 6 of the creatures that you recall o
 //your code here...
 class Animal {
 	constructor(name, size, color) {
-		(this.name = name), (this.size = size), (this.color = color);
-	}
-	speak() {
-		console.log('I am a' + this.name);
-	}
-	describe() {
-		console.log('I am' + this.color, 'and', +this.size);
-	}
+        (this.name = name), (this.size = size), (this.color = color);
+    }
+    call(){
+        console.log('caw caw I am a ' + this.name)
+    }
+    fly(){
+        console.log('my shadow is ' + this.size)
+    }
 }
+Eagle = new Animal('Eagle', 'large', 'brown')
+Toucan = new Animal('Toucan', 'medium', 'orange')
+Hoatzin = new Animal('Hoatzin', 'large', 'black')
+Vulture = new Animal('Vulture', 'x-large', 'dark')
+Macaw = new Animal('Macaw', 'medium-large', 'blue')
+Owl = new Animal('Owl', 'medium-small', 'white')
+
 
 /*3. Convert the following Object Literals into a general class called Shape, and instantiate the class to generate the object literals
  */
@@ -40,25 +47,40 @@ class Shape {
 			(this.height = height);
 	}
 	calcArea() {
-		if ((this.sides.length = 3)) {
+		if ((this.sides.length == 3)) {
 			let area = (this.base * this.height) / 2;
 			console.log(`${this.name}'s area is ${area}`);
 		}
-		if ((this.sides.length = 4)) {
+		if ((this.sides.length == 4)) {
 			let area = this.base * this.height;
 			console.log(`${this.name}'s area is ${area}`);
 		}
-		if ((this.sides.length = 1)) {
+		if ((this.sides.length == 1)) {
 			let area = (Math.PI * this.radius ** 2).toFixed(2);
 			console.log(`${this.name}'s area is ${area}`);
-		}
+        }
+        // This is the formula for a pentagon
+        if((this.sides.length == 5)) {
+            let area = (Math.sqrt(5(5+2*(Math.sqrt(5)))*sides[0]**2)/4)
+            console.log(`${this.name}'s area is ${area}`);
+        }
+        // This is the formula for a hexagon
+        if((this.sides.length == 6)){
+            let area = ((3 * Math.sqrt(3))/2) * sides[i]**2
+            console.log(`${this.name}'s area is ${area}`);
+        }
+        // This is the formula for a octagon
+        if((this.sides.length == 8)){
+            let area = (2*(1+ Math.sqrt(2))*sides[i]**2)
+            console.log(`${this.name}'s area is ${area}`);
+        }
 	}
 	calcHeight() {
-		if ((this.sides = 3)) {
+		if ((this.sides == 3)) {
 			this.height = Math.sqrt((this.sides[0]**2) + (this.sides[0]**2))
 		}}
 	calcPerimeter() {
-		if ((this.sides.length = 1)) {
+		if ((this.sides.length == 1)) {
 			let perimeter = (2 * Math.PI * this.radius).toFixed(2);
 			console.log(
 				`This is the perimeter of the ${this.name}: ${perimeter}`
