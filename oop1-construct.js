@@ -190,11 +190,12 @@ Bonus Exercises:
 class Earth {
 	name;
 	planetNum; //distance from the sun.  1-mercury, 2-venus, 3-earth, ...
-
+    count = 0;
 	constructor(name, num) {
-		this.name = name;
+        this.name = name;
 		this.planetNum = num;
-	}
+    }
+
 }
 
 const earth = new Earth('earth', 3);
