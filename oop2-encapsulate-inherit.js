@@ -11,15 +11,15 @@ class Books {
 	#author = '';
 	#publisher = '';
 	constructor(author, publisher) {
-		this._author = author;
-		this._publisher = publisher;
+		this.#author = #author;
+		this.#publisher = #publisher;
 	}
 	read() {
-		return this.author, this.publisher;
+		return this.#author, this.#publisher;
 	}
 	rewrite(author) {
-		this.author = author;
-		return this.author;
+		this.#author = #author;
+		return this.#author;
 	}
 }
 
@@ -27,18 +27,18 @@ class Author {
 	#books = [];
 	#name = '';
 	constructor(books, name) {
-		this._name = name;
-		this._books = books;
+		this.#name = #name;
+		this.#books = #books;
 	}
 	write() {
-		return this.name, this.books;
+		return this.#name, this.#books;
 	}
 	add(title) {
-		this.books.push(title);
-		return this.books;
+		this.#books.push(title);
+		return this.#books;
 	}
 	rename(name) {
-		this.name = name;
+		this.#name = #name;
 	}
 }
 
@@ -46,13 +46,13 @@ class Publisher {
 	#authors = [];
 	#books = [];
 	constructor(authors, books) {
-		this._authors = authors;
-		this._books = books;
+		this.#authors = #authors;
+		this.#books = #books;
 	}
 	newAuthor(name, book) {
-		this._authors.push(name);
-		this._books.push(books);
-		return this.authors, this.books;
+		this.#authors.push(name);
+		this.#books.push(books);
+		return this.#authors, this.#books;
 	}
 }
 
@@ -60,15 +60,15 @@ class Review {
 	#rating = '';
 	#user = '';
 	constructor(rating, user) {
-		this._rating = rating;
-		this._user = user;
+		this.#rating = #rating;
+		this.#user = #user;
 	}
 	rate(stars) {
-		this.rating = stars;
-		return this.rating;
+		this.#rating = #stars;
+		return this.#rating;
 	}
 	review() {
-		return this.rating, this.user;
+		return this.#rating, this.#user;
 	}
 }
 
@@ -82,8 +82,8 @@ class Review {
 
 //     //your code here...
 class Umbrella {
-	#Stock = 'SMP';
-	#MarketPrice = 500;
+	Stock = 'SMP';
+	MarketPrice = 500;
 	constructor(parent) {
 		this.parent = parent;
 	}
